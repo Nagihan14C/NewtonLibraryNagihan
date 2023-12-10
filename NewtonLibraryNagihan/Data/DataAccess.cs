@@ -223,7 +223,7 @@ namespace NewtonLibraryNagihan.Data
                         break;
 
                     default:
-                        Console.WriteLine("Invalid input. Please enter a number between 1 and 3.");
+                        Console.WriteLine("Invalid input. Please enter a number between 1 and 9.");
                         break;
                 }
 
@@ -265,7 +265,7 @@ namespace NewtonLibraryNagihan.Data
 
             _context.Authors.Add(author);
             _context.SaveChanges();
-            Console.WriteLine("You added an author!");
+            Console.WriteLine("\nYou added an author!");
         }
 
         public void AddABook()
@@ -287,21 +287,18 @@ namespace NewtonLibraryNagihan.Data
             {
                 
                 Title = BookTitle,
-                ISBN = new Guid().ToString(),
+                ISBN = Guid.NewGuid().ToString(),
                 PublishedYear = rnd.Next(1999,2023),
                 Grade = rnd.Next(1,6)
             };
             _context.Books.Add(book);
             _context.SaveChanges();
-            Console.WriteLine("You added a book!");
+            Console.WriteLine("\nYou added a book!");
         }
-
-
-
 
         public void AddABorrower()
         {
-            Console.WriteLine($"Write the name of the author:");
+            Console.WriteLine($"Write the firstname and the lastname of the borrower");
             string BorrowerFirstName;
             string BorrowerLastName;
             do
@@ -337,7 +334,7 @@ namespace NewtonLibraryNagihan.Data
             };
             _context.Borrowers.Add(borrower);
             _context.SaveChanges();
-            Console.WriteLine("You added a borrower!");
+            Console.WriteLine("\nYou added a borrower!");
         }
 
 
