@@ -23,7 +23,7 @@ namespace NewtonLibraryNagihan.Models
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
              
-            optionsBuilder.UseSqlServer(@"Server=tcp:newtonyh.database.windows.net,1433;Initial Catalog = NewtonLibrary; Persist Security Info=False;User ID = NewtonLibraryNagihan; Password=NewtonLibrary123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout = 30");
+            optionsBuilder.UseSqlServer(@"Server= tcp:newtonlibrarynagihan.database.windows.net, 1433; Initial Catalog = NewtonLibrary; Persist Security Info = False; User ID = NewtonLibraryNagihan; Password =NewtonLibrary123; MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30");
              
         }
      

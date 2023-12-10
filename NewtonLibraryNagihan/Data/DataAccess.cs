@@ -118,7 +118,7 @@ namespace NewtonLibraryNagihan.Data
             context.Books.AddRange(Book1, Book2, Book3, Book4);
             context.Borrowers.AddRange(borrower1, borrower2, borrower3);
 
-
+            
             context.SaveChanges();
 
         }

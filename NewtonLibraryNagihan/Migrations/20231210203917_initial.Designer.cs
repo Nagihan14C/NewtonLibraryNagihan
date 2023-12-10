@@ -12,8 +12,8 @@ using NewtonLibraryNagihan.Models;
 namespace NewtonLibraryNagihan.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20231210181843_initial2")]
-    partial class initial2
+    [Migration("20231210203917_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
