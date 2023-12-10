@@ -33,11 +33,11 @@ namespace NewtonLibraryNagihan.Data
 
             Author author3 = new Author();
             author3.firstName = "Jane";
-            author3.lastName = " Austen";
+            author3.lastName = "Austen";
 
             Author author4 = new Author();
-            author4.firstName = "Newton";
-            author4.lastName = " YH";
+            author4.firstName = "Isaac";
+            author4.lastName = "Newton";
 
 
             Book Book1 = new Book();
@@ -59,7 +59,7 @@ namespace NewtonLibraryNagihan.Data
             Book3.Grade = 2.4;
 
             Book Book4 = new Book();
-            Book4.Title = "Test ";
+            Book4.Title = "The Apple";
             Book4.PublishedYear = 2023;
             Book4.ISBN = Guid.NewGuid().ToString();
             Book4.Grade = 3.4;
@@ -137,7 +137,7 @@ namespace NewtonLibraryNagihan.Data
                 Console.WriteLine("5 - Return a book");
                 Console.WriteLine("6 - Show logbook for a borrower.");
                 Console.WriteLine("7 - Show logbook for a book");
-                Console.WriteLine("8 - Remove All Data from the list including author, book and borrower)");
+                Console.WriteLine("8 - Remove All Data from the list including authors, books and borrowers)");
                 Console.WriteLine("9 - Exit");
                 Console.Write("\nEnter a number between 1-9: ");
 
@@ -198,7 +198,7 @@ namespace NewtonLibraryNagihan.Data
                         break;
 
                     case "6":
-                        Console.Write("Enter Borrowerid to show logbook for a borrower: ");
+                        Console.Write("Please enter the BorrowerID to show logbook for a borrower: ");
                         string BorrowerId = Console.ReadLine();
                         int Borrowerid;
                         if(int.TryParse(BorrowerId,out Borrowerid))      
@@ -207,7 +207,7 @@ namespace NewtonLibraryNagihan.Data
                         break;
 
                     case "7":
-                        Console.Write("Enter Bookid to show logbook for a book: ");
+                        Console.Write("Please enter the BookID to show logbook for a book: ");
                         string BookId = Console.ReadLine();
                         int Bookid;
                         if (int.TryParse(BookId, out Bookid))
@@ -233,15 +233,15 @@ namespace NewtonLibraryNagihan.Data
 
         public void AddAnAuthor()
         {
-            Console.WriteLine($"Write the name of the author:");
+            Console.WriteLine($"Please write the name of the author:");
             string AuthorFirstName;
             string AuthorLastName;
             do
             {
-                Console.Write("Write the first name of the author: ");
+                Console.Write("Please write the first name of the author: ");
                 AuthorFirstName = Console.ReadLine();
 
-                Console.Write("Write the last name of the author: ");
+                Console.Write("Please write the last name of the author: ");
                 AuthorLastName = Console.ReadLine();
 
                 if (string.IsNullOrWhiteSpace(AuthorFirstName))
@@ -270,7 +270,7 @@ namespace NewtonLibraryNagihan.Data
 
         public void AddABook()
         {
-            Console.WriteLine($"Write the name of the book:");
+            Console.WriteLine($"Please write the name of the book:");
             string BookTitle;
             Random rnd = new Random();
             do
@@ -417,7 +417,7 @@ namespace NewtonLibraryNagihan.Data
             }
             else
             {
-                Console.WriteLine("Borrower could not be found.");
+                Console.WriteLine("Oops! Borrower could not be found.");
             }
         }
 
@@ -450,7 +450,7 @@ namespace NewtonLibraryNagihan.Data
             }
             else
             {
-                Console.WriteLine("Book could not be found.");
+                Console.WriteLine("Oops! Book could not be found.");
             }
 
         }
